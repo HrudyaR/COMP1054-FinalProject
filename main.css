@@ -1,0 +1,266 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    background: url(images/banner1.jpg) no-repeat;
+    background-size: cover;
+    line-height: 27px;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oleo Script', sans-serif;
+    margin: 10px 0 15px;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 26px;
+    color: #333;
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    border-radius: .25rem;
+    transition: all ease .15s
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+    display: table;
+}
+
+.btn.delete {
+    background-color: #db4c3f;
+    color: #fff;
+}
+
+.btn.delete:hover {
+    background-color: #e0675c;
+}
+
+.btn.add-btn:hover {
+    background-color: #45b161;
+}
+
+.btn.add-btn {
+    background-color: #0fae38;
+    color: white;
+    margin-left: 5px;
+}
+
+header {
+    padding: 30px 0;
+    background-color: #db4c3f;
+    color: #ffffff;
+    text-align: center;
+}
+
+header > h1 {
+    font-size: 40px;
+}
+
+main {
+    padding: 50px 0 100px;
+}
+
+main .half-section {
+    width: 50%;
+    float: left;
+    padding-right: 40px;
+}
+
+main .half-section.right {
+    padding-left: 40px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group .form-control {
+    padding: 6px 12px;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    margin-bottom: 10px;
+}
+
+ul.todo-list {
+    list-style-type: none;
+    width: 100%;
+    min-height: 100px;
+}
+
+ul.todo-list li {
+    padding: 15px 20px;
+    background-color: #db4c3f6e;
+    border-bottom: 1px solid #ffffff61;
+}
+
+ul.todo-list li:last-child {
+    border-bottom: none;
+}
+
+/* Customize checkbox CSS starts here */
+
+ul.todo-list li > label {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+ul.todo-list li > label > input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+ul.todo-list li > label > .checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+ul.todo-list li > label:hover > input ~ .checkmark {
+    background-color: #ccc;
+}
+
+ul.todo-list li > label > input:checked ~ .checkmark {
+    background-color:#0fae38;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+ul.todo-list li label input:checked ~ .checkmark::after {
+    display: block;
+}
+
+ul.todo-list li label .checkmark::after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Customize checkbox CSS ends here */
+
+ul.todo-list li.checked .itemName {
+    text-decoration: line-through;
+}
+
+ul.todo-list li .btn {
+    float: right;
+}
+
+footer {
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    font-size: 10px;
+    background-color: #db4c3f;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsive CSS starts here */
+
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    .wrapper {
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    main .half-section {
+        padding: 0;
+        float: none;
+        width: 100%;
+    }
+
+    main .half-section.right {
+        padding: 0;
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    body {
+        background: #e1d882;
+    }
+
+    main {
+        padding: 30px 0 80px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
